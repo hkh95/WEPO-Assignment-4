@@ -20,13 +20,14 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        port: 9000,
+        port: 9090,
         open: true,
         historyApiFallback: true
     },
     devtool: 'inline-source-map',
     plugins: [new HtmlWebpackPlugin({
-        title: 'ChatRoomJS',
-        template: './index.html'
+        title: 'PiazzaUno',
+        template: './index.html',
+        inject: 'body'
     })]
 };
