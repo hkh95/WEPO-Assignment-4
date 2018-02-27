@@ -11,6 +11,11 @@ module.exports = {
         rules: [
             { enforce: 'pre', test: /\.js$/, exclude: /node_modules/, use: 'eslint-loader' },
             { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
+            { test: /\.less$/, use: [
+                { loader: 'style-loader' },
+                { loader: 'css-loader' },
+                { loader: 'less-loader' }
+            ]}
         ]
     },
     watch: true,
